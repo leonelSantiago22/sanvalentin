@@ -1,0 +1,12 @@
+<div class="modal-container">
+  <div class="polaroid">
+    <img [src]="data.data.url" alt="Foto" class="polaroid-img" />
+    <div class="caption">{{ data.data.descripcion }}</div>
+    <div class="date">{{ data.data.fecha }}</div>
+  </div>
+  <button class="btn-31" (click)="closeDialog()">
+    <span class="text-container">
+      <span class="text">Cerrar</span>
+    </span>
+  </button>
+</div>

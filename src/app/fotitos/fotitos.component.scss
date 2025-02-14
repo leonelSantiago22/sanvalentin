@@ -1,0 +1,180 @@
+.row {
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    display: block !important;
+    width: 98% !important;
+    margin-bottom: 1rem !important;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.statics-container {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 16px;
+    background-color: #fbfcfc;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+/* Aumentar el tamaño de la tarjeta */
+.card {
+    position: relative;
+    background: #a68b8a;
+    width: 350px; /* Aumentar el ancho */
+    height: 450px; /* Aumentar la altura */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: visible;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajustar el contenedor de la imagen */
+.product {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 300px; /* Aumentar el ancho */
+    height: 300px; /* Aumentar la altura */
+    background-color: #faf3e8;
+    z-index: 1;
+}
+
+.product p {
+    font-size: 17px;
+    text-align: center;
+    color: #181818;
+    line-height: 150px;
+}
+
+/* Ajustar el efecto de brillo */
+.shine {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 250px; /* Aumentar el ancho */
+    height: 350px; /* Aumentar la altura */
+    overflow: hidden;
+}
+
+.shine-effect {
+    position: absolute;
+    top: -15%;
+    left: 150%;
+    width: 25px;
+    height: 400px;
+    background-color: #ffffff2a;
+    box-shadow: 0 0 15px 2px #ffffff42;
+    transform: rotate(25deg);
+    transition: all 1s cubic-bezier(0.78, 0.02, 0.5, 0.77);
+    z-index: 5;
+}
+
+/* Ajustar patrones y elementos decorativos */
+.pattern-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px; /* Aumentar el ancho */
+    height: auto;
+    z-index: 2;
+}
+
+.pattern-2 {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 250px; /* Aumentar el ancho */
+    height: auto;
+    z-index: 2;
+}
+
+.tree {
+    position: absolute;
+    bottom: 1%;
+    right: -2%;
+    width: 120px; /* Aumentar el ancho */
+    height: auto;
+    transform-origin: 100% 0;
+    transform: rotate(-15deg);
+    z-index: 3;
+}
+
+.tape-1 {
+    position: absolute;
+    top: -20%;
+    left: 2%;
+    width: 45px; /* Aumentar el ancho */
+    height: auto;
+    filter: drop-shadow(1px 3px 3px #fadbd8);
+    z-index: 6;
+}
+
+.tape-2 {
+    position: absolute;
+    top: -25%;
+    right: 2%;
+    width: 45px; /* Aumentar el ancho */
+    height: auto;
+    filter: drop-shadow(1px 3px 3px #fadbd8);
+    z-index: 6;
+}
+
+/* Efectos de hover y active */
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card:hover .tape-1 {
+    transform: scale(1);
+}
+
+.card:hover .tape-2 {
+    transform: scale(1);
+}
+
+.card:hover .shine-effect {
+    left: -100%;
+}
+
+.card:active {
+    transform: scale(1.02) translate(0, 5%);
+}
+
+.card:active .tape-1 {
+    transform-origin: 0 100%;
+    transform: scaleY(1.1);
+}
+
+.card:active .tape-2 {
+    transform-origin: 0 100%;
+    transform: scaleY(1.1);
+}
+
+/* Ajustar la imagen dentro de .product */
+.product img {
+    width: 100%;
+    height: 100%; /* Ocupar todo el espacio del contenedor */
+    border-radius: 8px;
+    object-fit: cover; /* Asegurar que la imagen cubra el espacio */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.product img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
