@@ -6,14 +6,6 @@
     margin-bottom: 1rem !important;
 }
 
-.section-title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
 .statics-container {
     margin-top: 1rem;
     display: flex;
@@ -26,8 +18,18 @@
     border-radius: 8px;
     width: 100%;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    overflow-x: auto;
+
+    min-height: 100vh; /* Asegurar que el contenedor ocupe al menos el alto de la pantalla */
 }
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
 
 /* Aumentar el tamaño de la tarjeta */
 .card {
@@ -37,7 +39,8 @@
     height: 450px; /* Aumentar la altura */
     cursor: pointer;
     transition: all 0.3s ease;
-    overflow: visible;
+
+    overflow: hidden;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
 }
 
